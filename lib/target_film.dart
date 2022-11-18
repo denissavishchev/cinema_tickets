@@ -246,7 +246,7 @@ class TargetFilm extends StatelessWidget {
                 child: Center(
                   child: GestureDetector(
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) => const SeatsPage())),
+                        builder: (BuildContext context) =>  const SeatsPage())),
                     child: Container(
                       padding:
                           const EdgeInsets.symmetric(horizontal: 65, vertical: 10),
