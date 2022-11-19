@@ -1,10 +1,15 @@
+import 'package:cinema_tickets/seats_page.dart';
 import 'package:flutter/material.dart';
 
+
+
+List <int> totalSeats = [];
+
 class SeatsWidget extends StatefulWidget {
- final Color color;
- final int seatNumber;
-  const SeatsWidget({Key? key,
-    required this.color, 
+  Color color = Colors.white;
+  final int seatNumber;
+  SeatsWidget({Key? key,
+     required this.color,
     required this.seatNumber,
     }) : super(key: key);
 
@@ -13,13 +18,28 @@ class SeatsWidget extends StatefulWidget {
 }
 
 class SeatsWidgetState extends State<SeatsWidget> {
+
+  final SeatsPageState _seatsPageState = SeatsPageState();
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          print(widget.seatNumber);
+          if (widget.color == Colors.white) {
+            widget.color = const Color(0xfff2c94c);
+            totalSeats.add(widget.seatNumber);
+          }else if(widget.color == Colors.grey) {
+            widget.color = Colors.grey;
+          }else if (widget.color == const Color(0xfff2c94c)){
+            widget.color = Colors.white;
+            totalSeats.remove(widget.seatNumber);
+
+          }
+
         });
+        print(SeatsPageState.ticketCounter);
+        print(totalSeats);
       },
       child: Container(
         margin: const EdgeInsets.only(top: 15),

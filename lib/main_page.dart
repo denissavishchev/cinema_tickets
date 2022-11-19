@@ -135,13 +135,13 @@ class MainPage extends StatelessWidget {
                                 Text(
                                   film.time,
                                   style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold, fontFamily: 'Garamond',),
                                 ),
                               ],
                             ),
                             const SizedBox(
-                              height: 20,
+                              height: 5,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -152,8 +152,8 @@ class MainPage extends StatelessWidget {
                                 Text(
                                   film.name,
                                   style: const TextStyle(
-                                      fontSize: 34,
-                                      fontWeight: FontWeight.bold),
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.bold, fontFamily: 'Garamond',),
                                 ),
                                 const SizedBox(
                                   width: 10,
@@ -222,7 +222,7 @@ class MainPage extends StatelessWidget {
                           Text(
                             'Movie',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16),
+                                fontWeight: FontWeight.bold, fontSize: 22, fontFamily: 'Garamond',),
                           ),
                         ],
                       ),
@@ -267,7 +267,7 @@ class SmallBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 6),
+        padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
         decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -284,7 +284,7 @@ class SmallBox extends StatelessWidget {
         child: Text(
           text,
           style:
-              TextStyle(color: textColor, fontWeight: FontWeight.bold),
+              TextStyle(color: textColor, fontWeight: FontWeight.bold, fontFamily: 'Garamond', fontSize: 16),
         ));
   }
 }

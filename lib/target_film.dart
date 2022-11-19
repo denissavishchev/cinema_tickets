@@ -19,7 +19,7 @@ class TargetFilm extends StatelessWidget {
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 450,
+                height: 420,
                 child: Image.asset(
                   'assets/images/${film.image}',
                   fit: BoxFit.fitWidth,
@@ -87,12 +87,12 @@ class TargetFilm extends StatelessWidget {
                         style: TextStyle(color: Colors.black.withOpacity(0.6)),
                       ),
                       const SizedBox(
-                        height: 4,
+                        height: 2,
                       ),
                       Text(
                         film.imdb,
                         style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
+                            fontWeight: FontWeight.bold, fontSize: 20, fontFamily: 'Garamond',),
                       ),
                     ],
                   ),
@@ -104,7 +104,8 @@ class TargetFilm extends StatelessWidget {
                     children: [
                       Text(
                         '(${film.reviews} reviews)',
-                        style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                        style: TextStyle(color: Colors.black.withOpacity(0.6), fontFamily: 'Garamond',
+                        fontSize: 16),
                       ),
                       Row(
                         children: [
@@ -115,7 +116,7 @@ class TargetFilm extends StatelessWidget {
                           Text(
                             film.rating,
                             style: const TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
+                                fontWeight: FontWeight.bold, fontSize: 20, fontFamily: 'Garamond',),
                           ),
                         ],
                       )
@@ -129,7 +130,7 @@ class TargetFilm extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 80.0),
@@ -163,22 +164,16 @@ class TargetFilm extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
           Text(
             film.name,
-            style: const TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold, fontFamily: 'Garamond',),
           ),
           Text(
             film.time,
             style: TextStyle(
                 color: Colors.black.withOpacity(
               0.6,
-            )),
-          ),
-          const SizedBox(
-            height: 5,
+            ), fontFamily: 'Garamond',),
           ),
           Column(
             children: [
@@ -190,19 +185,16 @@ class TargetFilm extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black.withOpacity(0.5),
-                        fontSize: 15),
+                        fontSize: 15, fontFamily: 'Garamond',),
                   ),
                   Text(
                     film.director,
                     style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                        fontSize: 16),
+                        fontSize: 16, fontFamily: 'Garamond',),
                   ),
                 ],
-              ),
-              const SizedBox(
-                height: 5,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -212,26 +204,26 @@ class TargetFilm extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black.withOpacity(0.5),
-                        fontSize: 15),
+                        fontSize: 15, fontFamily: 'Garamond',),
                   ),
                   Text(
                     film.writer,
                     style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                        fontSize: 16),
+                        fontSize: 16, fontFamily: 'Garamond',),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 5,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
                   film.description,
                   style: const TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.w700),
+                      fontSize: 16, fontWeight: FontWeight.w700, fontFamily: 'Garamond',),
                 ),
               )
             ],
@@ -256,7 +248,7 @@ class TargetFilm extends StatelessWidget {
                       ),
                       child: const Text(
                         'Buy Ticket',
-                        style: TextStyle(color: Color(0xffefc64c), fontSize: 22),
+                        style: TextStyle(color: Color(0xffefc64c), fontSize: 22, fontFamily: 'Garamond',),
                       ),
                 ),
               ),
